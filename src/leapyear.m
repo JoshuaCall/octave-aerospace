@@ -16,6 +16,7 @@
 %% USA
 
 function is_leap_year = leapyear(year)
+% Determines if input year(s) (either array or scalar) are leap years.
   year = floor(year);
   is_leap_year = (mod(year,4) == 0) & ((mod(year,100) ~= 0) | (mod(year,400) == 0));
 end

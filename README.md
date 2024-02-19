@@ -9,10 +9,19 @@ THIS SOFTWARE HAS NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDIN
 For all documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug.
 
 ## Installing
-To install and load this package in GNU Octave, run the following commands from the GNU Octave interface:
+In order to install this package from the GNU Octave command-line interface, you will need to have "mkoctfile." The GNU Octave FAQs states
 
 ```
-pkg install "https://github.com/JoshuaCall/octave-aerospace/downloads/octave-aerospace.tar.gz"
+If you really need to build Octave packages from source to install them, you'll need mkoctfile. Most distributions split Octave into several packages. The script mkoctfile is then part of a separate package:
+
+Debian/Ubuntu: liboctave-dev
+Fedora: octave-devel
+```
+
+After you have installed the appropriate package to get mkoctfile on your system, run the following commands from the GNU Octave interface to install octave-aerospace:
+
+```
+pkg install "https://github.com/JoshuaCall/octave-aerospace/raw/main/downloads/octave-aerospace.tar.gz"
 pkg load octave-aerospace
 ```
 
