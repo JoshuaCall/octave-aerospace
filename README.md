@@ -6,7 +6,7 @@ This software is released under the terms of the GNU General Public License as p
 THIS SOFTWARE HAS NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE LIBRARY IS WITH YOU. SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
 ## Documentation
-For all documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug.
+For all non-installation documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug.
 
 ## Installing
 In order to install this package from the GNU Octave command-line interface, you will need to have "mkoctfile." The GNU Octave FAQs states
@@ -25,3 +25,4 @@ pkg install "https://github.com/JoshuaCall/octave-aerospace/raw/main/downloads/o
 pkg load octave-aerospace
 ```
 
+Any time that you restart GNU Octave, the package will be unloaded. You will need to re-run the "pkg load octave-aerospace" command if you want to use the package.
