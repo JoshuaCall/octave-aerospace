@@ -10,5 +10,9 @@ For all documentation, see the MathWorks' documentation for the Aerospace Toolbo
 
 ## Installing
 To install and load this package in GNU Octave, run the following commands from the GNU Octave interface:
-    pkg install "https://github.com/JoshuaCall/octave-aerospace/downloads/octave-aerospace.tar.gz"
-    pkg load octave-aerospace
+
+```
+pkg install "https://github.com/JoshuaCall/octave-aerospace/downloads/octave-aerospace.tar.gz"
+pkg load octave-aerospace
+```
+
