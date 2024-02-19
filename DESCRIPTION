@@ -1,0 +1,10 @@
+Name: octave-aerospace
+Version: 0.0.0
+Date: 2024-18-02
+Author: Joshua Call
+Maintainer: Joshua Call
+Title: octave-aerospace
+Description: Partial re-implementation of the MathWorks Aerospace Toolbox. Intended for
+ use with either GNU Octave or MATLAB on GNU/Linux, with possible support for other
+ operating systems as well.
+License: LGPL-2.1-or-later
