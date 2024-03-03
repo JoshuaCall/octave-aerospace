@@ -1,14 +1,17 @@
 # octave-aerospace
-Partial re-implementation of the MathWorks Aerospace Toolbox under the LGPL-2.1-or-later license. Intended for use with either GNU Octave or MATLAB on GNU/Linux, with possible support for other operating systems as well. Currently in pre-alpha.
+Partial re-implementation of the MathWorks Aerospace Toolbox under the LGPL-2.1-or-later license. Intended for use with either GNU Octave or MATLAB.
 
 This software is released under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2.1 of the License, or (at your option) any later version. Copyright held by Joshua Call.
 
 THIS SOFTWARE HAS NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE LIBRARY IS WITH YOU. SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
 ## Documentation
-For all non-installation documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug. See INDEX file for a list of currently implemented functions.
+For all non-installation documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug. See the INDEX file for a list of currently implemented functions.
 
-## Installing
+## Using with MATLAB
+Individual function files in the "src" folder can be used with MATLAB. However, please keep in mind that as per the terms of the LGPL-2.1-or-later, it is not permitted to remove the copyright notice and disclaimer of warranty from the code. The Axes Transformations functions currently depend on geographiclib-octave: see the README at https://github.com/geographiclib/geographiclib-octave for their MATLAB installation instructions.
+
+## Using with GNU Octave
 In order to install this package from the GNU Octave command-line interface, you will need to have "mkoctfile." The GNU Octave FAQs states
 
 ```
