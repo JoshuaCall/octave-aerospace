@@ -6,7 +6,7 @@ This software is released under the terms of the GNU General Public License as p
 THIS SOFTWARE HAS NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE LIBRARY IS WITH YOU. SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
 ## Documentation
-For all non-installation documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug.
+For all non-installation documentation, see the MathWorks' documentation for the Aerospace Toolbox. Any difference in behavior between this software and the MathWorks Aerospace Toolbox documentation should be considered a bug. See INDEX file for a list of currently implemented functions.
 
 ## Installing
 In order to install this package from the GNU Octave command-line interface, you will need to have "mkoctfile." The GNU Octave FAQs states
@@ -18,9 +18,10 @@ Debian/Ubuntu: liboctave-dev
 Fedora: octave-devel
 ```
 
-After you have installed the appropriate package to get mkoctfile on your system, run the following commands from the GNU Octave interface to install octave-aerospace:
+After you have installed the appropriate package on your OS to get mkoctfile on your system, run the following commands from the GNU Octave interface to install octave-aerospace (note that octave-aerospace depends on the geographiclib-octave package):
 
 ```
+pkg install "https://sourceforge.net/projects/geographiclib/files/distrib-Octave/geographiclib-octave-2.0.tar.gz"
 pkg install "https://github.com/JoshuaCall/octave-aerospace/raw/main/downloads/octave-aerospace.tar.gz"
 pkg load octave-aerospace
 ```

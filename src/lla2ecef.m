@@ -15,17 +15,25 @@
 %% Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
 %% USA
 
-function ecef = lla2ecef(lla)
+function ecef = lla2ecef(lla,f,Re)
 % Convert geodetic to ECEF
-  a = 6378137.0; % Semi-major Axis, NGA.STND.0036_1.0.0_WGS84 2014-07-08, page 3-3
-  b = 6356752.3142; % Semi-minor Axis (Polar Radius of the Earth), NGA.STND.0036_1.0.0_WGS84 2014-07-08, page 3-9
-  e2 = 6.694379990141e-3; % First Eccentricity Squared, NGA.STND.0036_1.0.0_WGS84 2014-07-08, page 3-9
-  lat = deg2rad(lla(1));
-  lon = deg2rad(lla(2));
-  alt = lla(3);
-  n = a/sqrt(1-e2*sin(lat)*sin(lat));
-  x = (n+alt)*cos(lat)*cos(lon);
-  y = (n+alt)*cos(lat)*sin(lon);
-  z = ((1-e2)*n+alt)*sin(lat);
-  ecef = [x,y,z];
+
+% initialize ecef to empty matrix so that it can be concatenated later
+ecef = [];
+% if Re parameter was not passed in, assume standard lla2ecef function call with only 1 input
+  if ~exist('Re','var')
+    for i = 1:size(lla,1)
+      [x,y,z] = geocent_fwd(lla(i,1), lla(i,2), lla(i,3));
+      ecef = [ecef; [x,y,z]];
+    end
+  % else, if f and Re parameters were both passed in and are doubles, then use those values
+  elseif exist('f','var') && exist('Re','var') && isa(f,'double') && isa(Re,'double')
+    % calculate eccentricity from flattening according to https://en.wikipedia.org/w/index.php?title=Eccentricity_(mathematics)&oldid=1204283637#Other_formulae_for_the_eccentricity_of_an_ellipse
+    e = sqrt(1-(1-f)^2);
+    joshua_call_copyright_ellipsoid = [Re e];
+    for i = 1:size(lla,1)
+      [x,y,z,~] = geocent_fwd(lla(i,1), lla(i,2), lla(i,3),joshua_call_copyright_ellipsoid);
+      ecef = [ecef; [x,y,z]];
+    end
+  end
 end
