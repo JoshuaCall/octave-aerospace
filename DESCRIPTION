@@ -7,5 +7,5 @@ Title: octave-aerospace
 Description: Partial re-implementation of the MathWorks Aerospace Toolbox. Intended for
  use with either GNU Octave or MATLAB on GNU/Linux, with possible support for other
  operating systems as well.
-License: LGPL-2.1-or-later
+License: MIT
 depends: geographiclib
