@@ -2,6 +2,7 @@ octave-aerospace >> Octave Aerospace
 Unit Conversions
  leapyear
  convtemp
+ convacc
 Axes Transformations
  lla2ecef
  ecef2lla
