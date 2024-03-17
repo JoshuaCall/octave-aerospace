@@ -3,6 +3,7 @@ Unit Conversions
  leapyear
  convtemp
  convacc
+ convang
 Axes Transformations
  lla2ecef
  ecef2lla
