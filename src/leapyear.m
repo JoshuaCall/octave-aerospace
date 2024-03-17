@@ -10,6 +10,24 @@
 
 function is_leap_year = leapyear(year)
 % Determines if input year(s) (either array or scalar) are leap years.
+  if ~isnumeric(year)
+    error("input to leapyear must be numeric")
+  end
   year = floor(year);
   is_leap_year = (mod(year,4) == 0) & ((mod(year,100) ~= 0) | (mod(year,400) == 0));
 end
+
+%!assert (leapyear(0))
+%!assert (~leapyear(1700))
+%!assert (~leapyear(1800))
+%!assert (~leapyear(1900))
+%!assert (leapyear(1600))
+%!assert (leapyear(2000))
+%!assert (leapyear(2016))
+%!assert (~leapyear(2015))
+%!assert (~leapyear(1997))
+%!assert (~leapyear(2042))
+%!assert (~leapyear(2100))
+%!assert (leapyear(2400))
+%!assert (leapyear([2000 2005])==logical([1 0]))
+%!error leapyear('a')
